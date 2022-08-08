@@ -32,7 +32,9 @@ body{
     color: white;
     font-family: var(--fonte-padrao);
 }
-
+a.externo::after{
+    content: "\00A0\1F517";
+}
 header {
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
     min-height: 100px;
@@ -53,9 +55,11 @@ header > p {
     font-size: 1.5em;
     max-width: 500px;
     margin: auto;
+    margin-bottom: 20px;
     padding-right: 10px;
     padding-left: 10px;
     text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.597);
+
 }
 nav{
     background-color: var(--cor5);
@@ -64,7 +68,7 @@ nav{
 }
 nav > a{
     padding: 10px;
-    color: white;
+    color: var(--cor2);
     text-decoration: none;
     font-weight: bolder;
 }
@@ -94,42 +98,89 @@ main  h1{
 }
 main  h2{
     font-family: var(--fonte-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 10px;
+}
+main  p{
+    margin: 10px 0px;
+    text-align: justify;
+    text-indent: 20px;
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+main strong{
+    color: var(--cor5);
+    font-weight: bolder;
+}
+main a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: var(--cor5);
+    background-color: var(--cor2);
+    padding: 1px 2px;
+}
+main a:hover{
+    text-decoration: underline;
+    color: var(--cor6);
+
 }
 main  img{
     width: 100%;
 }
 main img.pequena{
-    width: 50%;
+    max-width: 350px ;
     display: block;
     margin: auto;
 }
-#video{
-    background-color: rgb(14, 107, 14);
-    height: 481px;
-    width: 840px;
-    margin: 0px 20px 0px -50px;
-    padding: 30px 30px 30px 30px;
-    border-radius: 0px;
-
-}
-#lista{
-    margin: 0px 0px 0px 300px;
-    padding: 0px 0px -500px 0px;
-}
-section > article{
-    background-color: aquamarine;
-    width: 650px;
-    height: 500px;
-    border-radius: 10px;
+div.video{
+    background-color: var(--cor6);
+    margin: 0px -20px 15px -20px;
+    padding: 30px;
+    padding-bottom: 56%;
+    position: relative;
     
+}
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+aside{
+    background-color: var(--cor2);
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.478);
+}
+aside > h3{
+    background-color: var(--cor4);
+    color: white;
+    padding: 5px 0px 5px 10px;
+    margin: -10px -15px 0px -15px;
+    border-radius: 10px 10px 0px 0px;
+}
+aside > ul{
+    list-style-type: "\2705\00A0\00A0";
+    list-style-position: inside;
+    columns: 2;
 }
 footer{
     background-color: rgb(36, 141, 62);
     color: white;
     text-align: center;
-    padding: 1px;
-    margin: 10px 0px 0px 0px;    
+    font-size: 1em;
+    padding: 5px;
 }
-footer > p{
-    margin: 0px;
+footer a{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
 }
+footer a:hover{
+    text-decoration: underline;
+    color: var(--cor2);
+}
+
